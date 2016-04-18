@@ -1,0 +1,15 @@
+.myWebApp {
+  width: 600px;
+  margin: auto;
+  border: 1px solid #DEE1E3; }
+
+header {
+  background-color: #428BCA;
+  color: white; }
+  header h2 {
+    padding: 20px; }
+
+.formElement input {
+  color: gray; }
+
+/*# sourceMappingURL=main.css.map */
