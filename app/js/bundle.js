@@ -9854,17 +9854,17 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var url = 'http://json-data.herokuapp.com/forms';
 
 //text input
-var info = (0, _jquery2['default'])('.info');
-function inputText(obj) {
-  return '\n  <div class="formDatum" id="' + obj.id + '">\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  <i class ="fa ' + obj.icon + '"></i>\n  </div>\n  ';
+var form = (0, _jquery2['default'])('.form');
+function input(obj) {
+  return '\n  <div class="formText" id="' + obj.id + '">\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  <i class ="fa ' + obj.icon + '"></i>\n  </div>\n  ';
 }
 
 var dataReq = _jquery2['default'].getJSON(url);
 
 dataReq.then(function (response) {
   response.forEach(function (data) {
-    var datum = inputText(data.label);
-    info.append(data.label);
+    var datum = input(data.label);
+    form.append(data.label);
     console.log(data.label);
   });
 });
@@ -9874,11 +9874,10 @@ dataReq.then(function (response) {
 //   var html = input(field);
 //   formArea.append(html);
 // });
-// // console.log(dataArr);
-// }
 // dataReq.then( function (response) {
 // buildForm(response);
 // });
+// }
 // console.log(dataReq);
 
 },{"jquery":1}]},{},[2])

@@ -9,7 +9,11 @@ header {
   header h2 {
     padding: 20px; }
 
-.formElement input {
-  color: gray; }
+input {
+  color: gray;
+  width: 450px;
+  padding: 10px 3px 10px 30px;
+  border: 1px solid gray;
+  margin-bottom: 10px; }
 
 /*# sourceMappingURL=main.css.map */
