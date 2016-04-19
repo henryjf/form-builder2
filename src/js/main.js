@@ -3,6 +3,7 @@ import $ from 'jquery';
 var url = 'http://json-data.herokuapp.com/forms';
 
 //text input
+var info = $('.info');
 function inputText (obj) {
   return `
   <div class="formElement" id="${obj.id}">
@@ -10,23 +11,26 @@ function inputText (obj) {
   <i class ="fa ${obj.icon}"></i>
   </div>
   `;
-//   <div class="formElement">
-//   <input type="text" placeholder="First Name">
-//   <i class="fa fa-user" aria-hidden="true"></i>
-// </div>
-// console.log(inputText);
-
 }
 
-function buildForm (dataArr) {
-dataArr.forEach(function (field){
-  var html = input(field);
-  formArea.append(html);
-});
-// console.log(dataArr);
-}
 var dataReq = $.getJSON(url);
-dataReq.then( function (response) {
-buildForm(response);
+
+dataReq.then(function(response){
+  response.forEach(function(data){
+    var datum=inputText(data.label);
+    info.append(data.label);
+    console.log(data.label);
+  });
 });
+
+// function buildForm (dataArr) {
+// dataArr.forEach(function (field){
+//   var html = input(field);
+//   formArea.append(html);
+// });
+// // console.log(dataArr);
+// }
+// dataReq.then( function (response) {
+// buildForm(response);
+// });
 // console.log(dataReq);
