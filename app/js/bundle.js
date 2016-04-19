@@ -9856,7 +9856,7 @@ var url = 'http://json-data.herokuapp.com/forms';
 //text input
 var info = (0, _jquery2['default'])('.info');
 function inputText(obj) {
-  return '\n  <div class="formElement" id="' + obj.id + '">\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  <i class ="fa ' + obj.icon + '"></i>\n  </div>\n  ';
+  return '\n  <div class="formDatum" id="' + obj.id + '">\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  <i class ="fa ' + obj.icon + '"></i>\n  </div>\n  ';
 }
 
 var dataReq = _jquery2['default'].getJSON(url);

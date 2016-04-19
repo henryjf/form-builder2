@@ -6,7 +6,7 @@ var url = 'http://json-data.herokuapp.com/forms';
 var info = $('.info');
 function inputText (obj) {
   return `
-  <div class="formElement" id="${obj.id}">
+  <div class="formDatum" id="${obj.id}">
   <input type="${obj.type}" placeholder="${obj.label}">
   <i class ="fa ${obj.icon}"></i>
   </div>
