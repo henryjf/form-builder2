@@ -9855,19 +9855,31 @@ var url = 'http://json-data.herokuapp.com/forms';
 
 //text input
 var form = (0, _jquery2['default'])('.form');
-function input(obj) {
-  return '\n  <div class="formText" id="' + obj.id + '">\n  <input type="' + obj.type + '" placeholder="' + obj.label + '">\n  <i class ="fa ' + obj.icon + '"></i>\n  </div>\n  ';
-}
-
 var dataReq = _jquery2['default'].getJSON(url);
 
-dataReq.then(function (response) {
-  response.forEach(function (data) {
-    var datum = input(data.label);
-    form.append(data.label);
-    console.log(data.label);
-  });
-});
+var textTemplate = function textTemplate(obj) {
+  return '\n   <div class="formText">\n       <input ' + obj.label + '>\n       <i class="fa fa-user" area-hidden="true">' + obj.icon + '</i>\n     </div>\n\n\n\n   ';
+  console.log(obj.label);
+};
+
+//  <div class="formText">
+//    <input type="text" placeholder="First Name">
+//    <i class="fa fa-user" area-hidden="true"></i>
+//  </div>
+// `
+// // <div class="formText" id="${obj.id}">
+// // <input type="${obj.type}" placeholder="${obj.label}">
+// // <i class ="fa ${obj.icon}"></i>
+// // </div>
+// `;
+
+// dataReq.then(function(response){
+//   response.forEach(function(data){
+//     var datum = input(data.label);
+//     form.append(data.label);
+//     // console.log(data.label);
+//   });
+// });
 
 // function buildForm (dataArr) {
 // dataArr.forEach(function (field){
