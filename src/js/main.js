@@ -8,16 +8,31 @@ var dataReq = $.getJSON(url);
 
 var textTemplate = function(obj) {
    return `
-   <div class="formText">
-       <input ${obj.label}>
-       <i class="fa fa-user" area-hidden="true">${obj.icon}</i>
+     <div class="formText" id="${obj.id}">
+       <input type="${obj.type}" placeholder="${obj.label}">
+       <i class="fa ${obj.icon}"></i>
      </div>
 
+     `;
+     console.log(obj);
+   }
+
+    //  <div class="formText">
+    //    <input type="text" placeholder="Last Name">
+    //    <i class="fa fa-user" area-hidden="true"></i>
+    //  </div>
+     //
+    //  <div class="formText">
+    //    <input type="text" placeholder="Email Address">
+    //    <i class="fa fa-envelope" area-hidden="true"></i>
+    //  </div>
+     //
+    //  <div class="formText">
+    //    <input type="text" placeholder="Website">
+    //    <i class="fa fa-envelope" area-hidden="true"></i>
+    //  </div>
 
 
-   `;
-   console.log(obj.label);
- }
 
   //  <div class="formText">
   //    <input type="text" placeholder="First Name">

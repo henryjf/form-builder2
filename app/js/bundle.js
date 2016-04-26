@@ -9858,9 +9858,24 @@ var form = (0, _jquery2['default'])('.form');
 var dataReq = _jquery2['default'].getJSON(url);
 
 var textTemplate = function textTemplate(obj) {
-  return '\n   <div class="formText">\n       <input ' + obj.label + '>\n       <i class="fa fa-user" area-hidden="true">' + obj.icon + '</i>\n     </div>\n\n\n\n   ';
-  console.log(obj.label);
+  return '\n     <div class="formText" id="' + obj.id + '">\n       <input type="' + obj.type + '" placeholder="' + obj.label + '">\n       <i class="fa ' + obj.icon + '"></i>\n     </div>\n\n     ';
+  console.log(obj);
 };
+
+//  <div class="formText">
+//    <input type="text" placeholder="Last Name">
+//    <i class="fa fa-user" area-hidden="true"></i>
+//  </div>
+//
+//  <div class="formText">
+//    <input type="text" placeholder="Email Address">
+//    <i class="fa fa-envelope" area-hidden="true"></i>
+//  </div>
+//
+//  <div class="formText">
+//    <input type="text" placeholder="Website">
+//    <i class="fa fa-envelope" area-hidden="true"></i>
+//  </div>
 
 //  <div class="formText">
 //    <input type="text" placeholder="First Name">
