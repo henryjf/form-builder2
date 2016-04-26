@@ -1,10 +1,12 @@
+
+.container {
 .myWebApp {
-  width: 600px;
+  width: 800px;
   margin: auto;
   border: 1px solid #DEE1E3;
-}
 
 header {
+  // width: 100%;
   background-color: #428BCA;
   color: white;
   h2 {
@@ -12,18 +14,21 @@ header {
   }
 }
 .formText{
-margin-left: 15%;
-}
+margin-left: 20px;
 
 
   input {
     color: gray;
-    width: 450px;
+    width: 650px;
     padding: 10px 3px 10px 30px;
     border: 1px solid gray;
     margin-bottom: 10px;
+    font-size: 12px;
   }
+}
 
-  .footer {
-    clear: both;
-  }
+  // .footer {
+  //   clear: both;
+  // }
+}
+}

@@ -1,25 +1,20 @@
-.myWebApp {
-  width: 600px;
+.container .myWebApp {
+  width: 800px;
   margin: auto;
   border: 1px solid #DEE1E3; }
-
-header {
-  background-color: #428BCA;
-  color: white; }
-  header h2 {
-    padding: 20px; }
-
-.formText {
-  margin-left: 15%; }
-
-input {
-  color: gray;
-  width: 450px;
-  padding: 10px 3px 10px 30px;
-  border: 1px solid gray;
-  margin-bottom: 10px; }
-
-.footer {
-  clear: both; }
+  .container .myWebApp header {
+    background-color: #428BCA;
+    color: white; }
+    .container .myWebApp header h2 {
+      padding: 20px; }
+  .container .myWebApp .formText {
+    margin-left: 20px; }
+    .container .myWebApp .formText input {
+      color: gray;
+      width: 650px;
+      padding: 10px 3px 10px 30px;
+      border: 1px solid gray;
+      margin-bottom: 10px;
+      font-size: 12px; }
 
 /*# sourceMappingURL=main.css.map */
