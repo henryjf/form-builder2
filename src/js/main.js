@@ -13,9 +13,18 @@ var textTemplate = function(obj) {
        <i class="fa ${obj.icon}"></i>
      </div>
 
-     `;
-     console.log(obj);
-   }
+     `
+    //  console.log(obj);
+   };
+
+   dataReq.then (function (response){
+     response.forEach(function(text){
+       var html = textTemplate(text);
+       $('.container').append(html);
+
+     });
+     console.log(response);
+   })
 
     //  <div class="formText">
     //    <input type="text" placeholder="Last Name">

@@ -9859,8 +9859,16 @@ var dataReq = _jquery2['default'].getJSON(url);
 
 var textTemplate = function textTemplate(obj) {
   return '\n     <div class="formText" id="' + obj.id + '">\n       <input type="' + obj.type + '" placeholder="' + obj.label + '">\n       <i class="fa ' + obj.icon + '"></i>\n     </div>\n\n     ';
-  console.log(obj);
+  //  console.log(obj);
 };
+
+dataReq.then(function (response) {
+  response.forEach(function (text) {
+    var html = textTemplate(text);
+    (0, _jquery2['default'])('.container').append(html);
+  });
+  console.log(response);
+});
 
 //  <div class="formText">
 //    <input type="text" placeholder="Last Name">

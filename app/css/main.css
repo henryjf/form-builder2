@@ -9,11 +9,17 @@ header {
   header h2 {
     padding: 20px; }
 
+.formText {
+  margin-left: 15%; }
+
 input {
   color: gray;
   width: 450px;
   padding: 10px 3px 10px 30px;
   border: 1px solid gray;
   margin-bottom: 10px; }
+
+.footer {
+  clear: both; }
 
 /*# sourceMappingURL=main.css.map */
