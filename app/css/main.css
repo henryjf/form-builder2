@@ -1,3 +1,7 @@
+.container {
+  width: 700px;
+  margin: auto; }
+
 header {
   background-color: #428BCA;
   color: white; }
@@ -5,19 +9,22 @@ header {
     padding: 20px; }
 
 .form {
-  width: 700px;
-  margin: 0 auto;
   border: 1px solid #DEE1E3;
-  padding: 15px;
-  position: relative; }
+  padding: 15px; }
   .form .formText {
     margin-bottom: 10px;
-    font-size: 12px; }
+    font-size: 12px;
+    position: relative;
+    color: gray; }
     .form .formText textarea {
       margin-left: 20px;
       color: gray;
       width: 600px;
-      padding: 10px 3px 10px 30px;
+      padding: 17px 5px 4px 30px;
       border: 1px solid gray; }
+  .form .fa {
+    position: absolute;
+    top: 17px;
+    left: 34px; }
 
 /*# sourceMappingURL=main.css.map */
