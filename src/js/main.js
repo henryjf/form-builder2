@@ -9,18 +9,27 @@ var dataReq = $.getJSON(url);
 var textTemplate = function(obj) {
    return `
      <div class="formText" id="${obj.id}">
-       <input type="${obj.type}" placeholder="${obj.label}">
+       <textarea name="name" placeholder= "${obj.label}"></textarea>
        <i class="fa ${obj.icon}"></i>
      </div>
-
      `
-    //  console.log(obj);
    };
+
+  //  <textarea name="name" placeholder= "First Name"></textarea>
+
+  //  var inputTemplate = function(obj){
+  //    return `
+  //    <div class="formInput" id="${obj.id}">
+  //      <input type="${obj.type}" placeholder="${obj.label}">
+  //      <i class="fa ${obj.icon}"></i>
+  //    </div>
+  //    `
+  //  };
 
    dataReq.then (function (response){
      response.forEach(function(text){
        var html = textTemplate(text);
-       $('.container').append(html);
+       $('.form').append(html);
 
      });
      console.log(response);

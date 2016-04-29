@@ -1,20 +1,23 @@
-.container .myWebApp {
-  width: 800px;
-  margin: auto;
-  border: 1px solid #DEE1E3; }
-  .container .myWebApp header {
-    background-color: #428BCA;
-    color: white; }
-    .container .myWebApp header h2 {
-      padding: 20px; }
-  .container .myWebApp .formText {
-    margin-left: 20px; }
-    .container .myWebApp .formText input {
+header {
+  background-color: #428BCA;
+  color: white; }
+  header h2 {
+    padding: 20px; }
+
+.form {
+  width: 700px;
+  margin: 0 auto;
+  border: 1px solid #DEE1E3;
+  padding: 15px;
+  position: relative; }
+  .form .formText {
+    margin-bottom: 10px;
+    font-size: 12px; }
+    .form .formText textarea {
+      margin-left: 20px;
       color: gray;
-      width: 650px;
+      width: 600px;
       padding: 10px 3px 10px 30px;
-      border: 1px solid gray;
-      margin-bottom: 10px;
-      font-size: 12px; }
+      border: 1px solid gray; }
 
 /*# sourceMappingURL=main.css.map */

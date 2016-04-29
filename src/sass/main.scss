@@ -1,10 +1,4 @@
 
-.container {
-.form {
-  width: 700px;
-  margin: auto;
-  border: 1px solid #DEE1E3;
-  padding: 15px
 
 header {
   // width: 100%;
@@ -14,22 +8,34 @@ header {
     padding: 20px;
   }
 }
+.form {
+  width: 700px;
+  // height: 900px;
+  margin: 0 auto;
+  border: 1px solid #DEE1E3;
+  padding: 15px;
+  position: relative;
+
 .formText{
-margin-left: 20px;
+  margin-bottom: 10px;
+  font-size: 12px;
+
 
 
   input {
+  }
+
+  textarea {
+    margin-left: 20px;
     color: gray;
-    width: 650px;
+    width: 600px;
     padding: 10px 3px 10px 30px;
     border: 1px solid gray;
-    margin-bottom: 10px;
-    font-size: 12px;
+
   }
 }
 
   // .footer {
   //   clear: both;
   // }
-}
 }
