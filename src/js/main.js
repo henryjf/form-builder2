@@ -2,9 +2,7 @@ import $ from 'jquery';
 
 var url = 'http://json-data.herokuapp.com/forms';
 
-//text input
 var form = $('.form');
-var dataReq = $.getJSON(url);
 
 var textTemplate = function(obj) {
    return `
@@ -15,71 +13,36 @@ var textTemplate = function(obj) {
      `
    };
 
-  //  <textarea name="name" placeholder= "First Name"></textarea>
+   var selectTemplate = function(lang){
+     return`
+     <select class="language" name="Language">
+     <option value="EN">${lang.options.label}</option>
+     </select>
+     `
+    };
+  //
+   $.getJSON(url).then (function (response){
+     response.forEach(function(input){
+//need to write an if else statement to select different templates
 
-  //  var inputTemplate = function(obj){
-  //    return `
-  //    <div class="formInput" id="${obj.id}">
-  //      <input type="${obj.type}" placeholder="${obj.label}">
-  //      <i class="fa ${obj.icon}"></i>
-  //    </div>
-  //    `
-  //  };
-
-   dataReq.then (function (response){
-     response.forEach(function(text){
-       var html = textTemplate(text);
-       $('.form').append(html);
+       var html = textTemplate(input);
+       form.append(html);
 
      });
-     console.log(response);
-   })
-
-    //  <div class="formText">
-    //    <input type="text" placeholder="Last Name">
-    //    <i class="fa fa-user" area-hidden="true"></i>
-    //  </div>
-     //
-    //  <div class="formText">
-    //    <input type="text" placeholder="Email Address">
-    //    <i class="fa fa-envelope" area-hidden="true"></i>
-    //  </div>
-     //
-    //  <div class="formText">
-    //    <input type="text" placeholder="Website">
-    //    <i class="fa fa-envelope" area-hidden="true"></i>
-    //  </div>
+    //  console.log(response);
+  });
 
 
 
-  //  <div class="formText">
-  //    <input type="text" placeholder="First Name">
-  //    <i class="fa fa-user" area-hidden="true"></i>
-  //  </div>
-  // `
-  // // <div class="formText" id="${obj.id}">
-  // // <input type="${obj.type}" placeholder="${obj.label}">
-  // // <i class ="fa ${obj.icon}"></i>
-  // // </div>
-  // `;
 
 
-// dataReq.then(function(response){
-//   response.forEach(function(data){
-//     var datum = input(data.label);
-//     form.append(data.label);
-//     // console.log(data.label);
-//   });
-// });
+   //  <textarea name="name" placeholder= "First Name"></textarea>
 
-
-// function buildForm (dataArr) {
-// dataArr.forEach(function (field){
-//   var html = input(field);
-//   formArea.append(html);
-// });
-// dataReq.then( function (response) {
-// buildForm(response);
-// });
-// }
-// console.log(dataReq);
+   //  var inputTemplate = function(obj){
+   //    return `
+   //    <div class="formInput" id="${obj.id}">
+   //      <input type="${obj.type}" placeholder="${obj.label}">
+   //      <i class="fa ${obj.icon}"></i>
+   //    </div>
+   //    `
+   //  };

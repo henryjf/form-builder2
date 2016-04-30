@@ -2,16 +2,20 @@
 .container {
   width: 700px;
   margin:auto;
+
 header {
-  // width: 100%;
+  font-weight: lighter;
   background-color: #428BCA;
   color: white;
+  margin-top: 20px;
+
   h2 {
     padding: 20px;
+    margin: 0;
   }
 }
+
 .form {
-  // margin: 0 auto;
   border: 1px solid #DEE1E3;
   padding: 15px;
 

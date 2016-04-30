@@ -9853,13 +9853,25 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 var url = 'http://json-data.herokuapp.com/forms';
 
-//text input
 var form = (0, _jquery2['default'])('.form');
-var dataReq = _jquery2['default'].getJSON(url);
 
 var textTemplate = function textTemplate(obj) {
   return '\n     <div class="formText" id="' + obj.id + '">\n       <textarea name="name" placeholder= "' + obj.label + '"></textarea>\n       <i class="fa ' + obj.icon + '"></i>\n     </div>\n     ';
 };
+
+var selectTemplate = function selectTemplate(lang) {
+  return '\n     <select class="language" name="Language">\n     <option value="EN">' + lang.options.label + '</option>\n     </select>\n     ';
+};
+//
+_jquery2['default'].getJSON(url).then(function (response) {
+  response.forEach(function (input) {
+    //need to write an if else statement to select different templates
+
+    var html = textTemplate(input);
+    form.append(html);
+  });
+  //  console.log(response);
+});
 
 //  <textarea name="name" placeholder= "First Name"></textarea>
 
@@ -9871,59 +9883,6 @@ var textTemplate = function textTemplate(obj) {
 //    </div>
 //    `
 //  };
-
-dataReq.then(function (response) {
-  response.forEach(function (text) {
-    var html = textTemplate(text);
-    (0, _jquery2['default'])('.form').append(html);
-  });
-  console.log(response);
-});
-
-//  <div class="formText">
-//    <input type="text" placeholder="Last Name">
-//    <i class="fa fa-user" area-hidden="true"></i>
-//  </div>
-//
-//  <div class="formText">
-//    <input type="text" placeholder="Email Address">
-//    <i class="fa fa-envelope" area-hidden="true"></i>
-//  </div>
-//
-//  <div class="formText">
-//    <input type="text" placeholder="Website">
-//    <i class="fa fa-envelope" area-hidden="true"></i>
-//  </div>
-
-//  <div class="formText">
-//    <input type="text" placeholder="First Name">
-//    <i class="fa fa-user" area-hidden="true"></i>
-//  </div>
-// `
-// // <div class="formText" id="${obj.id}">
-// // <input type="${obj.type}" placeholder="${obj.label}">
-// // <i class ="fa ${obj.icon}"></i>
-// // </div>
-// `;
-
-// dataReq.then(function(response){
-//   response.forEach(function(data){
-//     var datum = input(data.label);
-//     form.append(data.label);
-//     // console.log(data.label);
-//   });
-// });
-
-// function buildForm (dataArr) {
-// dataArr.forEach(function (field){
-//   var html = input(field);
-//   formArea.append(html);
-// });
-// dataReq.then( function (response) {
-// buildForm(response);
-// });
-// }
-// console.log(dataReq);
 
 },{"jquery":1}]},{},[2])
 

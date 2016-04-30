@@ -2,10 +2,13 @@
   width: 700px;
   margin: auto; }
   .container header {
+    font-weight: lighter;
     background-color: #428BCA;
-    color: white; }
+    color: white;
+    margin-top: 20px; }
     .container header h2 {
-      padding: 20px; }
+      padding: 20px;
+      margin: 0; }
   .container .form {
     border: 1px solid #DEE1E3;
     padding: 15px; }
