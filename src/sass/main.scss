@@ -32,13 +32,26 @@ header {
     width: 600px;
     padding: 17px 5px 4px 30px;
     border: 1px solid gray;
-
-  }
+    }
 
 .fa {
   position: absolute;
   top: 17px;
   left: 34px;
+}
+.language {
+  font-size: 12px;
+  margin-left: 20px;
+  margin-bottom: 15px;
+  width: 635px;
+  padding: 17px 5px 4px 30px;
+
+  textarea {
+    margin-left: 20px;
+    color: gray;
+    padding: 17px 5px 4px 30px;
+    border: 1px solid gray;
+    }
 }
 
 .formComment {

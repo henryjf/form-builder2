@@ -27,6 +27,17 @@
       position: absolute;
       top: 17px;
       left: 34px; }
+    .container .form .language {
+      font-size: 12px;
+      margin-left: 20px;
+      margin-bottom: 15px;
+      width: 635px;
+      padding: 17px 5px 4px 30px; }
+      .container .form .language textarea {
+        margin-left: 20px;
+        color: gray;
+        padding: 17px 5px 4px 30px;
+        border: 1px solid gray; }
     .container .form .formComment {
       width: 600px;
       position: relative; }

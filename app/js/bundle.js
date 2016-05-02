@@ -9877,23 +9877,10 @@ _jquery2['default'].getJSON(url).then(function (response) {
     } else {
       var html = textTemplate(input);
     }
-
-    //  var html = textTemplate(input);
     form.append(html);
   });
   //  console.log(response);
 });
-
-//  <textarea name="name" placeholder= "First Name"></textarea>
-
-//  var inputTemplate = function(obj){
-//    return `
-//    <div class="formInput" id="${obj.id}">
-//      <input type="${obj.type}" placeholder="${obj.label}">
-//      <i class="fa ${obj.icon}"></i>
-//    </div>
-//    `
-//  };
 
 },{"jquery":1}]},{},[2])
 
