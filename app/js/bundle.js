@@ -9857,10 +9857,12 @@ var form = (0, _jquery2['default'])('.form');
 
 var textTemplate = function textTemplate(obj) {
   return '\n     <div class="formText" id="' + obj.id + '">\n       <textarea name="name" placeholder= "' + obj.label + '"></textarea>\n       <i class="fa ' + obj.icon + '"></i>\n     </div>\n     ';
+  obj.languages.forEach(function (language) {});
+  console.log(language.options.label);
 };
 
 var selectTemplate = function selectTemplate(obj) {
-  return '\n     <select class="language" name="Language"\n     placeholder="' + obj.label + '">\n     <option value="' + obj.options.value + '">' + obj.options.label + '</option>\n     <i class="fa ' + obj.icon + '"></i>\n     </select>\n     ';
+  return '\n     <select class="language" name="Language"\n     placeholder="' + obj.label + '">\n     <option value="' + obj.options.value + '">' + obj.options.label + '</option>\n     </select>\n     ';
 };
 
 var textareaTemplate = function textareaTemplate(obj) {

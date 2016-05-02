@@ -11,14 +11,16 @@ var textTemplate = function(obj) {
        <i class="fa ${obj.icon}"></i>
      </div>
      `
-   };
+     obj.languages.forEach(function(language){
+     });
+     console.log(language.options.label);
+ };
 
    var selectTemplate = function(obj){
      return `
      <select class="language" name="Language"
      placeholder="${obj.label}">
      <option value="${obj.options.value}">${obj.options.label}</option>
-     <i class="fa ${obj.icon}"></i>
      </select>
      `
     };
