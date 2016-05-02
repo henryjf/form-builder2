@@ -9859,15 +9859,26 @@ var textTemplate = function textTemplate(obj) {
   return '\n     <div class="formText" id="' + obj.id + '">\n       <textarea name="name" placeholder= "' + obj.label + '"></textarea>\n       <i class="fa ' + obj.icon + '"></i>\n     </div>\n     ';
 };
 
-var selectTemplate = function selectTemplate(lang) {
-  return '\n     <select class="language" name="Language">\n     <option value="EN">' + lang.options.label + '</option>\n     </select>\n     ';
+var selectTemplate = function selectTemplate(obj) {
+  return '\n     <select class="language" name="Language"\n     placeholder="' + obj.label + '">\n     <option value="' + obj.options.value + '">' + obj.options.label + '</option>\n     <i class="fa ' + obj.icon + '"></i>\n     </select>\n     ';
+};
+
+var textareaTemplate = function textareaTemplate(obj) {
+  return '\n      <div class="formComment" id="' + obj.id + '">\n        <textarea name="name" placeholder= "' + obj.label + '"></textarea>\n        <i class="fa ' + obj.icon + '"></i>\n      </div>\n      ';
 };
 //
 _jquery2['default'].getJSON(url).then(function (response) {
   response.forEach(function (input) {
     //need to write an if else statement to select different templates
+    if (input.type === "select") {
+      var html = selectTemplate(input);
+    } else if (input.type === "textarea") {
+      var html = textareaTemplate(input);
+    } else {
+      var html = textTemplate(input);
+    }
 
-    var html = textTemplate(input);
+    //  var html = textTemplate(input);
     form.append(html);
   });
   //  console.log(response);

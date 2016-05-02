@@ -17,16 +17,32 @@
       font-size: 12px;
       position: relative;
       color: gray; }
-      .container .form .formText textarea {
-        margin-left: 20px;
-        color: gray;
-        width: 600px;
-        padding: 17px 5px 4px 30px;
-        border: 1px solid gray; }
+    .container .form textarea {
+      margin-left: 20px;
+      color: gray;
+      width: 600px;
+      padding: 17px 5px 4px 30px;
+      border: 1px solid gray; }
     .container .form .fa {
       position: absolute;
       top: 17px;
       left: 34px; }
+    .container .form .formComment {
+      width: 600px;
+      position: relative; }
+      .container .form .formComment textarea {
+        font-size: 12px;
+        margin-left: 20px;
+        color: gray;
+        width: 600px;
+        height: 100px;
+        padding: 17px 5px 4px 30px;
+        border: 1px solid gray; }
+      .container .form .formComment .fa {
+        position: absolute;
+        top: 15px;
+        left: 30px;
+        color: gray; }
   .container .footer {
     padding: 20px;
     background-color: #C9DEF0; }

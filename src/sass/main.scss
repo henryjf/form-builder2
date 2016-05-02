@@ -24,9 +24,7 @@ header {
   font-size: 12px;
   position: relative;
   color: gray;
-
-  input {
-  }
+}
 
   textarea {
     margin-left: 20px;
@@ -36,12 +34,33 @@ header {
     border: 1px solid gray;
 
   }
-}
 
 .fa {
   position: absolute;
   top: 17px;
   left: 34px;
+}
+
+.formComment {
+  width: 600px;
+  position: relative;
+
+  textarea {
+    font-size: 12px;
+    margin-left: 20px;
+    color: gray;
+    width: 600px;
+    height: 100px;
+    padding: 17px 5px 4px 30px;
+    border: 1px solid gray;
+  }
+
+  .fa {
+    position: absolute;
+    top: 15px;
+    left: 30px;
+    color: gray;
+  }
 }
 }
 .footer {
